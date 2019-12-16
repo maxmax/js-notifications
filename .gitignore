@@ -1,0 +1,33 @@
+# Cruft
+*~
+*#
+.#*
+.DS_Store
+.env
+variables.env
+.env.development
+.env.production
+.env.git
+.env.static
+
+# Test
+coverage
+.eslintcache
+
+# Logs
+*.log
+
+# npm & yarn
+node_modules/
+.npm
+.yarn-integrity
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock*
+package-lock.json
+# Editor/IDE
+.idea
+packages/api/etc/
+serverDev.js
+build/
