@@ -42,7 +42,9 @@ server
 ### Server Push
 
 1- ./node_modules/.bin/web-push generate-vapid-keys
+
 2- add PUBLIC_VAPID_KEY and PRIVATE_VAPID_KEY in env
+
 3- yarn start
 
 
