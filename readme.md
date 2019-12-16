@@ -1,6 +1,6 @@
 ### Demo
-* [FE https://maxmax.github.io/js-bp-notifications/](https://maxmax.github.io/js-notifications/)
-* [BE https://peaceful-escarpment-74489.herokuapp.com/](https://peaceful-escarpment-74489.herokuapp.com/)
+* [FE https://maxmax.github.io/js-notifications/](https://maxmax.github.io/js-notifications/)
+* [BE post on subscribe https://lit-citadel-20258.herokuapp.com/subscribe/](https://lit-citadel-20258.herokuapp.com/subscribe/)
 
 ### Project structure
 
