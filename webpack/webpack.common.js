@@ -69,6 +69,7 @@ module.exports = {
         PUBLIC_VAPID_KEY: JSON.stringify(process.env.PUBLIC_VAPID_KEY),
         SUBSCRIBE_API: JSON.stringify(process.env.SUBSCRIBE_API),
         PREVIEW_SCOPE: JSON.stringify(process.env.PREVIEW_SCOPE),
+        PUSH_MESSAGE: JSON.stringify(process.env.PUSH_MESSAGE),
       },
     }),
   ],
