@@ -50,7 +50,7 @@ server
 3- `yarn start` or `yarn build` or `start:prod`
 
 
-##### Add a new notification via 'Postman'
+##### Open postman with for send push message to subscibers or submit send message form
 
 ![Image alt](https://raw.githubusercontent.com/maxmax/js-notifications/master/src/static/postman.png)
 
