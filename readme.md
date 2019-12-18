@@ -50,6 +50,11 @@ server
 3- `yarn start` or `yarn build` or `start:prod`
 
 
+##### Add a new notification via 'Postman'
+
+![Image alt](https://raw.githubusercontent.com/maxmax/js-notifications/master/src/static/postman.png)
+
+
 ### Configuration
 * Webpack Config paths based on your file structure you can go to `webpack/paths.js` and modify the source and file names based on your need.
 * `webpack/webpack.common.js` config common webpack for both dev and production environments.
