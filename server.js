@@ -37,6 +37,7 @@ app.use(bodyParser.urlencoded({
 
 // Set static folder
 // app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'build')));
 // app.set('views', __dirname + '/public/js');
 
 // Set global vars

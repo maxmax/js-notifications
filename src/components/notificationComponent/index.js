@@ -11,10 +11,10 @@ function spawnNotification({ options, title, target, closeTimeout }) {
   return notification;
 }
 
-function spawnNotificationSubscribing(text) {
-  const notification = new Notification(text);
-  return notification;
-}
+// function spawnNotificationSubscribing(text) {
+//  const notification = new Notification(text);
+//  return notification;
+// }
 
 export function notificationComponent(notificationMessage) {
   // Check browser support for notifications

@@ -13,7 +13,7 @@
     "obfuscated": "webpack --config webpack.obfuscated.js",
     "server:dev": "cross-env NODE_ENV=production nodemon server.js",
     "start:production": "yarn build && yarn obfuscated && yarn start:prod",
-    "start:prod": "cross-env NODE_ENV=development node server.js"
+    "start:prod": "cross-env NODE_ENV=production node server.js"
   },
   "lint-staged": {
     "*.{js,jsx,css,md}": [

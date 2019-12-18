@@ -1,5 +1,5 @@
-import { notificationComponent } from '../../components/notificationComponent';
-import { NOTIFICATION_MESSAGE_SUBSCRIBING } from '../../static/entries';
+// import { notificationComponent } from '../../components/notificationComponent';
+// import { NOTIFICATION_MESSAGE_SUBSCRIBING } from '../../static/entries';
 
 const SUBSCRIBE_API = process.env.SUBSCRIBE_API || 'subscribe/';
 const PUBLIC_KEY = process.env.PUBLIC_VAPID_KEY || '';
@@ -65,9 +65,9 @@ export function webPushNotification() {
                 },
               });
               isSubscribed = true;
-              //
-              notificationComponent(NOTIFICATION_MESSAGE_SUBSCRIBING);
-              //
+              // notificationComponent
+              // notificationComponent(NOTIFICATION_MESSAGE_SUBSCRIBING);
+              // end notificationComponent
             } catch (err) {
               console.log(err);
             }
