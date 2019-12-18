@@ -1,6 +1,6 @@
 ### Demo
-* [FE https://maxmax.github.io/js-notifications/](https://maxmax.github.io/js-notifications/)
-* [BE post on subscribe https://lit-citadel-20258.herokuapp.com/subscribe/](https://lit-citadel-20258.herokuapp.com/subscribe/)
+* [On client https://maxmax.github.io/js-notifications/](https://maxmax.github.io/js-notifications/)
+* [On backend https://lit-citadel-20258.herokuapp.com/](https://lit-citadel-20258.herokuapp.com/)
 
 ### Project structure
 
@@ -8,9 +8,8 @@
 build/
 src/
 |- index.js _______________________________ # Application entry
-|- components/notificationComponent/index.js _________ # Application components
-|- containers/notifications/index.js _________ # Application containers
-|- containers/pushNotifications/index.js _________ # Application containers
+|- components _________ # Application components
+|- containers _________ # Application containers
 |- sw.js _______________________________ # Service Worker entry
 |- style.scss _____________________________ # Application style using css modules
 
@@ -25,6 +24,9 @@ webpack
 
 server
 |- server.js _______________________ # common
+|- config _______________________ # keys
+|- model _______________________ # model
+|- router _______________________ # router
 ````
 
 ### Installation
@@ -45,7 +47,7 @@ server
 
 2- add PUBLIC_VAPID_KEY and PRIVATE_VAPID_KEY in env
 
-3- yarn start
+3- `yarn start` or `yarn build` or `start:prod`
 
 
 ### Configuration
@@ -70,6 +72,9 @@ server
 * [CSS modules](https://github.com/css-modules/css-modules) [ Isolated style based on each component ]
 * [Browsers list](https://github.com/browserslist/browserslist) [ Share target browsers between different front-end tools, like Autoprefixer, Stylelint and babel-preset-env ]
 * [Webpack dev serve](https://github.com/webpack/webpack-dev-server)
+* [web-push](https://github.com/web-push-libs/web-push) [ Web push requires that push messages triggered from a backend be done via the Web Push Protocol and if you want to send data with your push message, you must also encrypt that data according to the Message Encryption for Web Push spec. ]
+* [express](https://github.com/expressjs/express)
+* [mongoose](https://github.com/Automattic/mongoose)
 
 #### Docs
 
