@@ -31,4 +31,5 @@ package-lock.json
 packages/api/etc/
 serverDev.js
 serverBase.js
+build/
 ____public/
