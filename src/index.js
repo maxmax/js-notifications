@@ -13,7 +13,7 @@ const app = document.getElementById('app');
 
 app.insertAdjacentHTML(
   'beforebegin',
-  '<p class="' + styles.headline + '">notifications</p>',
+  '<p class="' + styles.headline + '">Notifications</p>',
 );
 
 // app.insertAdjacentHTML(
