@@ -3,7 +3,7 @@
 
 const SUBSCRIBE_API = process.env.SUBSCRIBE_API || 'subscribe/';
 const PUBLIC_KEY = process.env.PUBLIC_VAPID_KEY || '';
-const PREVIEW_SCOPE = process.env.PREVIEW_SCOPE || '/';
+const PREVIEW_SCOPE = process.env.PREVIEW_SCOPE || '/js/';
 
 /**
  * urlBase64ToUint8Array
