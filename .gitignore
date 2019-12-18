@@ -30,4 +30,6 @@ package-lock.json
 .idea
 packages/api/etc/
 serverDev.js
+serverBase.js
 build/
+____public/
