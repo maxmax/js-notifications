@@ -5,6 +5,7 @@ module.exports = {
   outputPath: path.resolve(__dirname, '../', 'build'),
   entryPath: path.resolve(__dirname, '../', 'src/index.js'),
   swPath: path.resolve(__dirname, '../', 'src/sw.js'),
+  swName: 'sw.js',
   templatePath: path.resolve(__dirname, '../', 'src/template.html'),
   imagesFolder: 'images',
   fontsFolder: 'fonts',

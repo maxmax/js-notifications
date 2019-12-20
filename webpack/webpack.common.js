@@ -1,4 +1,5 @@
 const path = require('path');
+const { GenerateSW, InjectManifest } = require('workbox-webpack-plugin');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
@@ -8,7 +9,6 @@ require('dotenv').config();
 module.exports = {
   entry: {
     main: commonPaths.entryPath,
-    // sw: commonPaths.swPath,
   },
   module: {
     rules: [
@@ -71,6 +71,14 @@ module.exports = {
         PREVIEW_SCOPE: JSON.stringify(process.env.PREVIEW_SCOPE),
         PUSH_MESSAGE: JSON.stringify(process.env.PUSH_MESSAGE),
       },
+    }),
+    // new GenerateSW({
+    //  clientsClaim: true,
+    //  skipWaiting: true,
+    // }),
+    new InjectManifest({
+      swSrc: commonPaths.swPath,
+      swDest: commonPaths.swName,
     }),
   ],
 };

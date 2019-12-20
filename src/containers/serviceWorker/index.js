@@ -16,7 +16,7 @@ export async function serviceWorker() {
   if ('serviceWorker' in navigator && 'PushManager' in window) {
     console.log('Service Worker and Push is supported');
     try {
-      const register = await navigator.serviceWorker.register('js/sw.js', {
+      const register = await navigator.serviceWorker.register('/sw.js', {
         scope: PREVIEW_SCOPE,
       });
 
@@ -29,3 +29,13 @@ export async function serviceWorker() {
     console.error('Service workers are not supported in this browser');
   }
 }
+
+// if ('serviceWorker' in navigator) {
+//   window.addEventListener('load', () => {
+//     navigator.serviceWorker.register('/service-worker.js').then(registration => {
+//       console.log('SW registered: ', registration);
+//     }).catch(registrationError => {
+//       console.log('SW registration failed: ', registrationError);
+//     });
+//   });
+// }

@@ -4,15 +4,13 @@
   "description": "js notifications",
   "main": "server.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --open && webpack --config webpack.obfuscated.js",
-    "build": "cross-env NODE_ENV=production webpack && webpack --config webpack.obfuscated.js",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --open",
+    "build": "cross-env NODE_ENV=production webpack",
     "format": "prettier --write 'packages/**/*.js'",
     "test": "jest --watchAll --coverage",
     "precommit": "lint-staged",
     "deploy": "gh-pages -d build",
-    "obfuscated": "webpack --config webpack.obfuscated.js",
     "server:dev": "cross-env NODE_ENV=production nodemon server.js",
-    "start:production": "yarn build && yarn obfuscated && yarn start:prod",
     "start:prod": "cross-env NODE_ENV=production node server.js"
   },
   "lint-staged": {
@@ -122,6 +120,7 @@
     "gh-pages": "^2.1.1",
     "mongoose": "^5.8.1",
     "q": "^1.5.1",
-    "web-push": "^3.4.3"
+    "web-push": "^3.4.3",
+    "workbox-webpack-plugin": "^4.3.1"
   }
 }

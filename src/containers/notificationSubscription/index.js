@@ -29,7 +29,6 @@ export async function notificationSubscription(register, publicKey) {
           applicationServerKey: publicKey,
         });
         console.log('User is subscribed');
-        // on /subscribe
         await fetch(SUBSCRIBE_API, {
           method: 'POST',
           body: JSON.stringify(subscriptionData),
@@ -44,7 +43,6 @@ export async function notificationSubscription(register, publicKey) {
         console.log(err);
       }
     }
-    // END is isSubscribed
   } catch (err) {
     console.log(err);
   }
