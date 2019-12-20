@@ -84,6 +84,6 @@ server
 #### Docs
 
 
-* [Notification](https://developer.mozilla.org/ru/docs/Web/API/notification)
-* [Push API](https://developer.mozilla.org/ru/docs/Web/API/Push_API)
-* [Service Worker API](https://developer.mozilla.org/ru/docs/Web/API/Service_Worker_API)
+* [Notification](https://developer.mozilla.org/en-US/docs/Web/API/notification)
+* [Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
+* [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)

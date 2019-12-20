@@ -1,11 +1,10 @@
-// import { notificationComponent } from '../../components/notificationComponent';
-// import { NOTIFICATION_MESSAGE_SUBSCRIBING } from '../../static/entries';
 const PUSH_MESSAGE = process.env.PUSH_MESSAGE || '/push';
 
 /**
  * submit Form
  *
  */
+
 async function submitMessageForm(payload) {
   try {
     await fetch(PUSH_MESSAGE, {
@@ -24,6 +23,7 @@ async function submitMessageForm(payload) {
  * send Message
  *
  */
+
 export function sendMessage() {
   const sendMessageForm = document.querySelector('#sendMessage');
   const submitForm = sendMessageForm.querySelector('button');
