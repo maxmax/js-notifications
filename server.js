@@ -3,7 +3,6 @@ const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 require('./model/subscribers_model');
-const admin = require('./router/admin');
 const keys = require('./config/keys');
 
 //Handlebars Helpers
