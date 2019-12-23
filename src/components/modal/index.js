@@ -4,18 +4,17 @@
  */
 
 export function modal() {
+  const sendMessageModal = document.querySelector('#sendMessageModalWrapper');
   const sendMessageModalBtn = document.querySelector('#sendMessageModalBtn');
-  const sendMessageModalWrapper = document.querySelector('#sendMessageModalWrapper');
-  const sendMessageModalClose = sendMessageModalWrapper.querySelector('.close');
-  let show = false;
+  const sendMessageModalClose = sendMessageModal.querySelector('.close');
   sendMessageModalBtn.addEventListener('click', event => {
     event.preventDefault();
-    sendMessageModalWrapper.classList.add("show");
-    sendMessageModalWrapper.style.display = 'block';
+    sendMessageModal.classList.add('show');
+    sendMessageModal.style.display = 'block';
   });
   sendMessageModalClose.addEventListener('click', event => {
     event.preventDefault();
-    sendMessageModalWrapper.classList.remove("show");
-    sendMessageModalWrapper.style.display = 'none';
+    sendMessageModal.classList.remove('show');
+    sendMessageModal.style.display = 'none';
   });
 }
