@@ -1,6 +1,6 @@
 ### Demo
-* [On client https://maxmax.github.io/js-notifications/](https://maxmax.github.io/js-notifications/)
-* [On backend https://lit-citadel-20258.herokuapp.com/](https://lit-citadel-20258.herokuapp.com/)
+* [On BE https://maxmax.github.io/js-notifications/](https://maxmax.github.io/js-notifications/)
+* [On FE submit message https://lit-citadel-20258.herokuapp.com/](https://lit-citadel-20258.herokuapp.com/push)
 
 ### Project structure
 
@@ -56,6 +56,7 @@ server
 
 
 ### Configuration
+
 * Webpack Config paths based on your file structure you can go to `webpack/paths.js` and modify the source and file names based on your need.
 * `webpack/webpack.common.js` config common webpack for both dev and production environments.
 * webpack/webpack.dev.js config webpack for dev environment.
@@ -66,7 +67,6 @@ server
 
 
 #### Technologies used
-
 
 * [Webpack 4](https://github.com/webpack/webpack)
 * [Babel 7](https://github.com/babel/babel) [ transforming JSX and ES6,ES7,ES8 ]
@@ -82,7 +82,6 @@ server
 * [mongoose](https://github.com/Automattic/mongoose)
 
 #### Docs
-
 
 * [Notification](https://developer.mozilla.org/en-US/docs/Web/API/notification)
 * [Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
