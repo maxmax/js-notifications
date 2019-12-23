@@ -3,9 +3,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 require('./model/subscribers_model');
-const index = require('./router');
-const push = require('./router/push');
-const subscribe = require('./router/subscribe');
+const admin = require('./router/admin');
 const keys = require('./config/keys');
 
 //Handlebars Helpers
@@ -48,10 +46,8 @@ app.use((req, res, next) => {
 
 // Use Routes
 
-app.use('/', index);
+app.use(require('./router'));
 // app.get("/", (req, res) => res.send("App!"));
-app.use('/subscribe', subscribe);
-app.use('/push', push);
 
 
 // catch 404 and forward to error handler

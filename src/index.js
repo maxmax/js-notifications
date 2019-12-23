@@ -1,6 +1,7 @@
+import { modal } from './components/modal';
+import { sendMessageForm } from './containers/sendMessageForm';
 import { serviceWorker } from './containers/serviceWorker';
 import { sendMessage } from './containers/sendMessage';
-import { sendMessageForm } from './containers/sendMessageForm';
 import styles from './styles.scss';
 
 const app = document.getElementById('app');
@@ -20,3 +21,6 @@ serviceWorker();
 
 // sendMessage
 sendMessage();
+
+// Modal
+modal();

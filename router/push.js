@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
@@ -26,7 +27,7 @@ router.post('/', (req, res) => {
     } else {
       let parallelSubscriptionCalls = subscriptions.map((subscription) => {
 
-        console.log();
+        // console.log('subscriptions______', subscriptions);
 
         return new Promise((resolve, reject) => {
 
@@ -72,16 +73,92 @@ router.post('/', (req, res) => {
       q.allSettled(parallelSubscriptionCalls).then((pushResults) => {
         console.info(pushResults);
       });
+      // response.json(request.body);
       res.json({
         data: 'Push triggered'
       });
+      // res.send('Push triggered Test');
     }
   });
 });
 
 router.get('/', (req, res) => {
-  res.json({
-    data: 'Invalid Request Bad'
-  });
+
+  const sendMessageForm = `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>js notifications</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+      <section class="container" style="margin: 5% auto;">
+        <div class="card">
+          <div class="card-body">
+            <h2>Push message</h2>
+            <form id="sendMessage" action="/push" method="post">
+              <div class="form-group">
+                <label>Title</label>
+                <input type="text" name="title" value="To do list" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>Message</label>
+                <input type="text" name="message" value="welcome friends" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>Url</label>
+                <input type="text" name="url" value="http://127.0.0.1:3000" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>Icon</label>
+                <input type="text" name="icon" value="https://maxmax.github.io/rnbp/static/media/robot-dev.c6505b75.png" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>Badge</label>
+                <input type="text" name="badge" value="https://maxmax.github.io/rnbp/static/media/robot-dev.c6505b75.png" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>Data</label>
+                <input type="text" name="data" value="Hello World" class="form-control">
+              </div>
+              <br />
+              <button type="submit" class="btn btn-primary btn-block" id="submit">Send Message</button>
+            </form>
+            <script>
+              document.addEventListener('DOMContentLoaded', function(){
+                let sendMessageForm = document.getElementById("sendMessage");
+                document.getElementById("submit").addEventListener("click", function (e) {
+                    e.preventDefault();
+                    // get form data
+                    let title = sendMessageForm.elements["title"].value;
+                    let message = sendMessageForm.elements["message"].value;
+                    let url = sendMessageForm.elements["url"].value;
+                    let icon = sendMessageForm.elements["icon"].value;
+                    let badge = sendMessageForm.elements["badge"].value;
+                    let data = sendMessageForm.elements["data"].value;
+                    // serialize data in json
+                    let user = JSON.stringify({title, message, url, icon, badge, data});
+                    let request = new XMLHttpRequest();
+                    // send a request to the address "/push"
+                    request.open("POST", "/push", true);
+                    request.setRequestHeader("Content-Type", "application/json");
+                    request.addEventListener("load", function () {
+                      // we receive and parse the server response
+                      let receivedMessage = JSON.parse(request.response);
+                      console.log(receivedMessage);   // look at the server response
+                    });
+                    request.send(user);
+                 });
+              });
+            </script>
+          </div>
+        </div>
+      </section>
+    </body>
+  </html>`;
+  // res.send(sendMessageForm);
+  // res.sendFile(path.join(__dirname, '../build/push-message.html'));
+  res.send(sendMessageForm);
 });
 module.exports = router;
